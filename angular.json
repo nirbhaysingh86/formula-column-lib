@@ -1,0 +1,70 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "formula-column1": {
+      "projectType": "library",
+      "root": "projects/formula-column1",
+      "sourceRoot": "projects/formula-column1/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/formula-column1/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/formula-column1/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/formula-column1/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/formula-column1/src/test.ts",
+            "tsConfig": "projects/formula-column1/tsconfig.spec.json",
+            "karmaConfig": "projects/formula-column1/karma.conf.js"
+          }
+        }
+      }
+    },
+    "formula-column2": {
+      "projectType": "library",
+      "root": "projects/formula-column2",
+      "sourceRoot": "projects/formula-column2/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/formula-column2/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/formula-column2/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/formula-column2/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/formula-column2/src/test.ts",
+            "tsConfig": "projects/formula-column2/tsconfig.spec.json",
+            "karmaConfig": "projects/formula-column2/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "formula-column1"
+}
